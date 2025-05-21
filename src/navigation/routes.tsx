@@ -20,7 +20,7 @@ interface Route {
   icon?: JSX.Element;
 }
 
-export const routes: Route[] = [
+/*export const routes: Route[] = [
   // Основной экран для телеграм мини-аппа
   { path: '/', Component: MainScreen },
   
@@ -65,59 +65,59 @@ export const routes: Route[] = [
     ),
   },
   { path: '/diagnostics', Component: DiagnosticsPage },
-];
+];*/
 
-export const router = createHashRouter([
+export const routes = [
   {
     path: '/',
-    element: <MainScreen />
+    element: MainScreen
   },
   {
     path: '/quiz',
-    element: <QuizFlow />
+    element: QuizFlow
   },
   {
     path: '/practice/:contentId',
-    element: <PracticePage />
+    element: PracticePage
   },
   {
     path: '/practice/meditation/:meditationType/:meditationObject',
-    element: <PracticePage />
+    element: PracticePage
   },
   {
     path: '/practice/:contentId/:meditationType',
-    element: <PracticePage />
+    element: PracticePage
   },
   {
     path: '/admin',
-    element: <AdminPage />
+    element: AdminPage
   },
   {
     path: '/old-index',
-    element: <IndexPage />
+    element: IndexPage
   },
   {
     path: '/init-data',
-    element: <InitDataPage />
+    element: InitDataPage
   },
   {
     path: '/launch-params',
-    element: <LaunchParamsPage />
+    element: LaunchParamsPage
   },
   {
     path: '/theme-params',
-    element: <ThemeParamsPage />
+    element: ThemeParamsPage
   },
   {
     path: '/profile',
-    element: <ProfilePage />
+    element: ProfilePage
   },
   {
     path: '/ton-connect',
-    element: <TONConnectPage />
+    element: TONConnectPage
   },
   {
     path: '/diagnostics',
-    element: <DiagnosticsPage />
+    element: DiagnosticsPage
   }
-]);
+];
